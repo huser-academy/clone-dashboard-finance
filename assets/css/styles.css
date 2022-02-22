@@ -1,0 +1,205 @@
+/* General Styles */
+
+/* @font-face {
+  font-family: 'Telegraf';
+  src: url('./../fonts/Telegraf-Bold.woff2') format('woff2'),
+      url('./../fonts/Telegraf-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+} */
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sidebar */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  width: min(100%, 252px);
+  height: 100%;
+  border-right: 2px solid #EBEBEB;
+  padding: 168px 36px 32px 40px;
+}
+
+/* Menu */
+
+.nav__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: #C7C7C7;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__icon {
+  margin-right: 18px;
+}
+
+.nav__icon rect {
+  fill: transparent
+}
+
+.nav__icon path {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__link--active,
+.nav__link:hover {
+  background-color: #F0F7FF;
+  color: #197BBD;
+}
+
+.nav__link--active .nav__icon path,
+.nav__link:hover .nav__icon path {
+  stroke: #197BBD;
+}
+
+/* Upsell */
+
+.upsell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.upsell__illustration {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.upsell__description {
+  width: min(100%, 130px);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #404040;
+  margin-bottom: 16px;
+}
+
+.upsell__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 164px);
+  height: 40px;
+  background: #FFC145;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 11.1442px;
+  line-height: 14px;
+  color: #404040;
+  border-radius: 14px;
+  transition: all .3s ease-in-out;
+  gap: 0 4px;
+}
+
+.upsell__button:hover {
+  opacity: 0.7;
+}
+
+/* Main Content */
+
+.main-content {
+  padding: 32px 44px;
+  flex-grow: 1;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 53px;
+  color: #404040;
+  margin-bottom: 4px;
+}
+
+.header__description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #AEAEAE;
+}
+
+/* User Actions */
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* User Action Mensage */
+
+.user-actions-message {
+  margin-right: 20px;
+  line-height: 0;
+}
+
+/* User Action Alert */
+
+.user-actions-alert {
+  position: relative;
+  margin-right: 24px;
+  line-height: 0;
+}
+
+.user-actions-alert__notification {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background: #BB4430;
+}
+
+
+/* User Action Profile */
+
+.user-actions-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-actions-profile__avatar {
+  margin-right: 8px;
+}
+
+.user-actions-profile__name {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #404040;
+}
+
+.user-actions-profile__role {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #AEAEAE;
+}
