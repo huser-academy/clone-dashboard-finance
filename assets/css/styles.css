@@ -209,12 +209,22 @@
 
 .main-finance {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 0 32px;
 }
 
 .main-finance__block--left {
-  width: min(100%, 596px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+  width: calc(50% + 90px);
+}
+
+.main-finance__block--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 /* Credit Card Block */
@@ -378,4 +388,352 @@
 .credit-card-info__input:checked + .credit-card-info__switch::before {
   transform: translateX(100%);
   background-color: green;
+}
+
+/* Transaction Block */
+
+.transaction-block {
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  padding: 18px 28px 28px 24px;
+}
+
+.transaction-block__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #404040;
+  margin-bottom: 18px;
+}
+
+.transaction-block-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse; 
+}
+
+.transaction-block-table__trow {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.transaction-block-table__trow--noborder {
+  border: 0;
+}
+
+.transaction-block-table__th {
+  padding-bottom: 18px;
+}
+
+.transaction-block-table__title {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #AEAEAE;
+}
+
+.transaction-block-table__body .transaction-block-table__trow:first-child .transaction-block-table__column {
+  padding-top: 0;
+}
+
+.transaction-block-table__column {
+  padding: 12px 0 12px;
+}
+
+.transaction-block-table__text {
+  display: flex;
+  align-items: center;
+  gap: 0 6px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #404040;
+}
+
+.transaction-block-table__text--light {
+  color: #C7C7C7;
+}
+
+.transaction-block-table__text--dark {
+  font-weight: bold;
+  color: #404040;
+}
+
+/* Goals Block */
+
+.goals-block {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.goals-block__title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #404040;
+  gap: 0 6px;
+  margin-bottom: 14px;
+}
+
+.goals-block__list {
+  display: flex;
+  gap: 0 14px;
+}
+
+.goals-block__list-item {
+  width: min(100%, 158px);
+}
+
+.goals-block-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 28px;
+  padding: 14px 0 12px 24px;
+}
+
+.goals-block-card__price {
+  display: block;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #696969;
+}
+
+.goals-block-card__date {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #AEAEAE;
+  margin-bottom: 36px;
+}
+
+.goals-block-card__icon {
+  margin-bottom: 2px;
+}
+
+.goals-block-card__name {
+  font-size: 20px;
+  line-height: 25px;
+  color: #404040;
+}
+
+/* Statics Block */
+
+.statics-block {
+  margin-bottom: 44px;
+}
+
+.statics-block__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #404040;
+  margin-bottom: 12px;
+}
+
+.statics-block-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+
+.statics-block-info__row {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  gap: 0 16px;
+}
+
+.statics-block-info__icon {
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.statics-block-info__category {
+  flex-grow: 1;
+}
+
+.statics-block-info__progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 100px;
+  background-color: #F1F1F1;
+  margin-bottom: 8px;
+}
+
+.statics-block-info__progress-bar {
+  width: 30%;
+  height: 100%;
+  border-radius: 100px;
+}
+
+.statics-block-info__progress-bar--orange {
+  background: linear-gradient(270deg, #FCAE73 0%, #F79042 99.18%);
+}
+
+.statics-block-info__progress-bar--green {
+  background: linear-gradient(90deg, #209D43 0%, #2BC255 100%);
+}
+
+.statics-block-info__progress-bar--blue {
+  background: #70A6E8;
+}
+
+.statics-block-info__name {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #AEAEAE;
+}
+
+.statics-block-info__percentage {
+  display: block;
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #696969;
+}
+
+/* New Transaction Block */
+
+.new-transaction-block {
+  display: flex;
+  align-items: flex-start;
+}
+
+.new-transaction-block__column--left {
+  background: #FFFFFF;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  padding: 16px 12px 12px;
+  flex-grow: 1;
+  margin-right: 14px;
+}
+
+.new-transaction-block__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #404040;
+  margin-bottom: 16px;
+}
+
+.new-transaction-block__people {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+
+.new-transaction-block__people-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 12px;
+}
+
+.new-transaction-block__people-name {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #404040;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.new-transaction-block__people-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #404040;
+  margin-left: 4px;
+}
+
+.new-transaction-block__people-icon {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.new-transaction-handle__form {
+  display: flex;
+  align-items: center;
+}
+
+.new-transaction-handle__input {
+  flex-grow: 1;
+  height: 36px;
+  background: #FFFFFF;
+  border: 1px solid #197BBD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-left: 10px;
+  font-size: 24px;
+  line-height: 30px;
+  color: #C7C7C7;
+  margin-right: 10px;
+}
+
+.new-transaction-handle__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 132px);
+  height: 36px;
+  background: #FFC145;
+  border-radius: 13.617px;
+  font-weight: bold;
+  font-size: 11.1442px;
+  line-height: 14px;
+  color: #404040;
+}
+
+@media screen and (max-width: 1344px) {
+  /* rules */
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  /* Header */
+
+  .header__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .header__description {
+    max-width: 220px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  /* Main Content */
+
+  .main-content {
+    padding: 32px 16px;
+  }
+  
+  .main-finance__block--left {
+    width: 100%;
+  }
+  
+  /* Main Finance */
+
+  .main-finance {
+    flex-direction: column;
+  }
 }
