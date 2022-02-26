@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300,regular,700,900" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -191,12 +193,15 @@
                 <div class="credit-card-info">
                   <div class="credit-card-info__block--left">
                     <div class="credit-card-info__card">
-                      <img src="./assets/images/credit-card-image.png" alt="">
+                      <div class="swiper">
+                        <div class="swiper-wrapper">
+                        </div>
+                      </div>
                       <div class="credit-card-info__arrows">
-                        <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="swiper-button-prev" width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M11.597 1.67169L1.96356 11.3051L11.597 20.9386" stroke="#197BBD" stroke-width="2.58466" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="swiper-button-next" width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M1.49235 1.67169L11.1258 11.3051L1.49235 20.9386" stroke="#197BBD" stroke-width="2.58466" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>                          
                       </div>
@@ -209,14 +214,13 @@
                         Weekly payment limit
                       </span>
                       <span class="credit-card-info__text credit-card-info__text--black">
-                        $350.60 / $4000
+                        
                       </span>
                     </div>
                   </div>
                   <div class="credit-card-info__block--right">
                     <div class="credit-card-info__balance">
                       <span class="credit-card-info__text credit-card-info__text--blue credit-card-info__text--dollar">
-                        2850.75
                       </span>
                       <span class="credit-card-info__text">
                         Current balance
@@ -224,7 +228,6 @@
                     </div>
                     <div class="credit-card-info__balance">
                       <span class="credit-card-info__text credit-card-info__text--green credit-card-info__text--dollar">
-                        1500.50
                       </span>
                       <span class="credit-card-info__text">
                         Income
@@ -232,7 +235,6 @@
                     </div>
                     <div class="credit-card-info__balance">
                       <span class="credit-card-info__text credit-card-info__text--red credit-card-info__text--dollar">
-                        350.60
                       </span>
                       <span class="credit-card-info__text">
                         Outcome
@@ -648,5 +650,7 @@
       </div>
     </main>
   </div>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./scripts/main.js"></script>
 </body>
 </html>
